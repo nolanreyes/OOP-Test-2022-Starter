@@ -2,6 +2,7 @@ package ie.tudublin;
 
 import processing.data.TableRow;
 
+//Nematode Class
 public class Nematode {
 
     private String name;
@@ -10,6 +11,14 @@ public class Nematode {
     private String gender;
     private Boolean eyes;
 
+    //toString
+    @Override
+    public String toString() {
+        return "Nematode [eyes=" + eyes + ", gender=" + gender + ", length=" + length + ", limbs=" + limbs + ", name="
+                + name + "]";
+    }
+
+    //TableRow 
     public Nematode(TableRow tr)
     {
         this(   tr.getString("name"),
@@ -21,6 +30,7 @@ public class Nematode {
 
     }
 
+    //Constructors
     public Nematode(String name, int length, Boolean limbs, String gender, Boolean eyes) {
         this.name = name;
         this.length = length;
@@ -28,6 +38,8 @@ public class Nematode {
         this.gender = gender;
         this.eyes = eyes;
     }
+    
+    //Accessors
     public String getName() {
         return name;
     }
@@ -58,6 +70,5 @@ public class Nematode {
     public void setEyes(Boolean eyes) {
         this.eyes = eyes;
     }
-
     
 }
