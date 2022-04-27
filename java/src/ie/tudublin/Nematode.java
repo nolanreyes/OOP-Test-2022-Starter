@@ -79,4 +79,50 @@ public class Nematode {
         this.eyes = eyes;
     }
 
+    public void render(NematodeVisualiser pa)
+    {
+        float bodyRoll = 80;
+        float border = (pa.height - (length * bodyRoll)) / 2;
+        float x = pa.width / 2;
+        float y;
+        
+
+        pa.ellipseMode(PApplet.CENTER);
+        pa.stroke(255);
+        pa.noFill();
+        
+
+        //body
+        for (int i = 0; i < length; i++)
+        {
+            y = PApplet.map(i, 0, length, border, pa.height - border);
+
+            // segment
+            pa.circle(x, y, bodyRoll);
+
+            // limbs
+            if (limbs == true)
+            {
+                pa.line(x - bodyRoll / 2, y, x - bodyRoll / 2 - 50, y);
+                pa.line(x + bodyRoll / 2, y, x + bodyRoll / 2 + 50, y);
+            }
+            /*
+            //gender 
+            if (gender ==)
+            {
+
+            }
+            */
+        }
+
+        //eyes
+        if (eyes == true)
+        {
+            
+        }
+        
+        //name
+        
+        
+    }
 }
