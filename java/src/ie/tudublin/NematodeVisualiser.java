@@ -6,6 +6,20 @@ import processing.core.PApplet;
 import processing.data.Table;
 import processing.data.TableRow;
 
+public class Nematode {
+
+    private String name;
+
+    private int length;
+
+    private int limbs;
+
+    private char gender;
+
+    private Boolean eyes;
+
+}
+
 public class NematodeVisualiser extends PApplet
 {
 
@@ -38,4 +52,6 @@ public class NematodeVisualiser extends PApplet
 	public void draw()
 	{	
 	}
+
+	
 }
